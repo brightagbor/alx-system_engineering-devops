@@ -1,2 +1,2 @@
 #!/bin/bash
-parent_dir=$(dirname "$(pwd)"); rsync -u *.html "$parent_dir"
+rsync -u --ignore-existing --include '*.html' --exclude '*' ./*.html ..
